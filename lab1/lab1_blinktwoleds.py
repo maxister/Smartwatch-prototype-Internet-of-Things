@@ -1,0 +1,35 @@
+import machine,time
+
+def blinkTwo(pin1,pin2,m):
+	led1 = machine.Pin(pin1,machine.Pin.OUT)
+	led2 = machine.Pin(pin2,machine.Pin.OUT)
+	for i in range(m):
+		led1.value(0)
+		led2.value(0)
+		time.sleep(0.2)
+		led1.value(1)
+		time.sleep(0.2)
+		led1.value(0)
+		time.sleep(0.2)
+		led1.value(1)
+		time.sleep(0.2)
+		led1.value(0)
+		time.sleep(0.2)
+		led1.value(1)
+		time.sleep(0.2)
+
+		led1.value(0)
+		led2.value(1)
+		time.sleep(0.2)
+		led1.value(1)
+		time.sleep(0.2)
+		led1.value(0)
+		time.sleep(0.2)
+		led1.value(1)
+		time.sleep(0.2)
+		led1.value(0)
+		time.sleep(0.2)
+		led1.value(1)
+		time.sleep(0.2)
+
+blinkTwo(0,2,10)
